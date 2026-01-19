@@ -1,54 +1,60 @@
-body {
-  font-family: Arial, sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 30px;
-  background: #f7f7f7;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SEAMS 2026 Paper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
+<body>
 
-h1 {
-  font-size: 2.2em;
-  margin-bottom: 10px;
-}
+<header>
+  <h1>Grammar-Constrained Refinement of Safety Operational Rules Using Language in the Loop: What Could Go Wrong</h1>
+  <p class="authors">Anonymous</p>
+  <p class="venue">SEAMS 2026</p>
+</header>
 
-.authors {
-  font-style: italic;
-}
+<main>
 
-.venue {
-  font-weight: bold;
-}
+<section>
+  <h2>Abstract</h2>
+  <p>
+    Safety specifications in cyber-physical systems (CPS) capture the operational conditions that the system shall satisfy to operate safely within its intended environment. As environmental conditions evolve, operational rules that express acceptance criteria must be continuously refined to preserve alignment with observed system behavior. These rules, often expressed as logical or quantitative constraints on system behavior, are validated through simulation-based testing but may become inconsistent as new operational conditions or boundary behaviors emerge. We ask: Can grammar-constrained refinement loop using large language models (LLMs) automatically refine inconsistent operational rules while preserving syntactic correctness and semantic validity, and what safety concerns emerge from language-in-the-loop refinement? We introduce a framework that combines counterfactual reasoning with a grammar-constrained refinement loop to refine operational rules, aligning them with the observed system behavior. Applied to an autonomous driving control system, our grammar-constrained refinement loop, supported by counterfactual evidence, successfully resolved the inconsistencies in an operational rule inferred by a conventional baseline while remaining grammar compliant. An empirical LLM variant study further revealed model dependent refinement quality and safety lessons, which motivate parser-based grammar enforcement, stronger automated validation and broader evaluation in future work.
+  </p>
+</section>
 
-section {
-  background: white;
-  padding: 20px;
-  margin-bottom: 25px;
-  border-radius: 8px;
-}
+<section>
+  <h2>Paper</h2>
+  <a class="button" href="seams26-paper66-revised_paper.pdf" target="_blank" rel="noopener noreferrer">📄 Download Paper PDF</a>
+</section>
 
-ul {
-  padding-left: 20px;
-}
+<section>
+  <h2>Related Documents</h2>
+  <a class="button" href="Prompt.pdf" target="_blank" rel="noopener noreferrer">📄 Download Prompt</a>
+  <a class="button" href="Refined_Rules.pdf" target="_blank" rel="noopener noreferrer">📄 Download Refined Rules</a>
+</section>
 
-.button,
-button {
-  display: inline-block;
-  padding: 10px 16px;
-  background: #0077cc;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-}
+<section>
+  <h2>Citation</h2>
+  <button onclick="copyCitation()">📚 Copy BibTeX</button>
+</section>
 
-.button:hover,
-button:hover {
-  background: #005fa3;
+</main>
+
+<script>
+function copyCitation() {
+  const bibtex = `
+@inproceedings{yourkey2026,
+  title     = {Grammar-Constrained Refinement of Safety Operational Rules Using Language in the Loop: What Could Go Wrong},
+  author    = {Anonymous},
+  booktitle = {Proceedings of SEAMS 2026},
+  year      = {2026}
+}`;
+  navigator.clipboard.writeText(bibtex);
+  alert("Citation copied!");
 }
+</script>
+
+</body>
+</html>
