@@ -13,11 +13,11 @@ header {
 }
 
 .header_img {
-  max-width: 100%;
+  max-width: 100%;   /* scale to screen width */
   height: auto;
   display: block;
-  margin: 0 auto 15px auto;
-  border-radius: 10px;
+  margin: 0 auto 15px auto; /* centered with space below */
+  border-radius: 10px;      /* optional rounded corners */
 }
 
 .paper_title {
@@ -29,12 +29,12 @@ header {
 
 .authors_container {
   display: block;
-  text-align: left;
+  text-align: left; /* left-aligned */
   margin-top: 5px;
 }
 
 .authors_names, .year {
-  font-size: 0.9em;
+  font-size: 0.9em; /* smaller text */
   color: #555;
   margin: 2px 0;
 }
